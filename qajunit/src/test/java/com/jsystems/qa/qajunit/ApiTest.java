@@ -28,9 +28,8 @@ public class ApiTest extends ConfigJunit {
 //        assertThat(stringTestowy).contains("k");
         assertThat(stringTestowy).isEqualTo("stringTestowy");
         assertThat(stringTestowy).endsWith("wy");
-//        assertThat(stringTestowy).endsWith("wy");
-//        assertThat(stringTestowy).endsWith("wy");
-//    }
+
+  }
 
     @Tag("second")
     @Test
@@ -40,6 +39,6 @@ public class ApiTest extends ConfigJunit {
         System.out.println(result);
         assertTrue(result == 0.04);
         assertFalse( 0.2 * 0.2 == 0.04);
-//        ttt
+
     }
 }
