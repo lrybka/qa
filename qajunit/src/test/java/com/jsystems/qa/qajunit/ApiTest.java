@@ -28,8 +28,9 @@ public class ApiTest extends ConfigJunit {
 //        assertThat(stringTestowy).contains("k");
         assertThat(stringTestowy).isEqualTo("stringTestowy");
         assertThat(stringTestowy).endsWith("wy");
-
-    }
+//        assertThat(stringTestowy).endsWith("wy");
+//        assertThat(stringTestowy).endsWith("wy");
+//    }
 
     @Tag("second")
     @Test
