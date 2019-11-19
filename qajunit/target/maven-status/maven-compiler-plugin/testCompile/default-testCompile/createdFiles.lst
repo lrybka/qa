@@ -1,0 +1,4 @@
+com\jsystems\qa\qajunit\ConfigJunit.class
+com\jsystems\qa\qajunit\JunitTest$NestedTest.class
+com\jsystems\qa\qajunit\JunitTest.class
+com\jsystems\qa\qajunit\ApiTest.class
