@@ -40,5 +40,6 @@ public class ApiTest extends ConfigJunit {
         System.out.println(result);
         assertTrue(result == 0.04);
         assertFalse( 0.2 * 0.2 == 0.04);
+//        ttt
     }
 }
