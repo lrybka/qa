@@ -67,7 +67,7 @@ public class JunitTest extends ConfigJunit{
         String simpleString_2 = new String("simpleString");
         String simpleString_3 = new String("simpleString");
 
-        assertTrue(simpleString == "simplString");
+        assertTrue(simpleString == "simpleString");
         assertTrue(simpleString == simple);
         assertFalse(simpleString == simpleString_2);
         assertFalse(simpleString_2 == simpleString_3);
