@@ -58,6 +58,27 @@ public class JunitTest extends ConfigJunit{
 
     }
 
+
+    @Test
+    public void stringTest(){
+        String simpleString = "simpleString";
+        String simple = "simpleString";
+
+        String simpleString_2 = new String("simpleString");
+        String simpleString_3 = new String("simpleString");
+
+        assertTrue(simpleString == "simplString");
+        assertTrue(simpleString == "simplString");
+
+
+
+
+    }
+
+
+
+
+
     @Nested
     public class NestedTest {
 
