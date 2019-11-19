@@ -12,12 +12,33 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Junit tests")
 @Tag("unit")
-public class JunitTest {
+public class JunitTest extends ConfigJunit{
+
+
+
+
+    @BeforeEach
+    public  void setupEach(TestInfo testInfo){
+        System.out.println("==========BeforeEach===========");
+        System.out.println(testInfo.getDisplayName());
+        System.out.println(testInfo.getTags());
+        System.out.println(testInfo.getTestMethod());
+
+    }
+
+
+
+    @AfterEach
+    public  void tearDownEach(){
+        System.out.println("==========AfterEach===========");
+    }
+
+
 
     final String stringTestowy = "stringTestowy";
 
     @DisplayName("First junit tests")
-    @Disabled("bug: import, 1230")
+//    @Disabled("bug: import, 1230")
 //    @RepeatedTest(5)
     @Tag("first")
     @Test
@@ -48,7 +69,7 @@ public class JunitTest {
 
         List<Integer> list1 = Arrays.asList(1,2,3,4,5);
         List<Integer> list2 = Arrays.asList(3,4,5);
-
+//        List<Integer> list3 = Arrays.asList(3,4,5);
 
 
         @Test
@@ -57,9 +78,6 @@ public class JunitTest {
             assertTrue(list1.containsAll(list2));
             assertThat(list1).hasSize(5);
             assertThat(list1).containsAnyOf(1, 2, 3);
-
-
-
 
         }
 

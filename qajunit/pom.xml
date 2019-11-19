@@ -10,6 +10,10 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <tags>UnitTest</tags>
+    </properties>
+
     <artifactId>qajunit</artifactId>
 
     <dependencies>
