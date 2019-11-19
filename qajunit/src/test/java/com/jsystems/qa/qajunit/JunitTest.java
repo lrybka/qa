@@ -20,7 +20,6 @@ public class JunitTest extends ConfigJunit{
         System.out.println(testInfo.getDisplayName());
         System.out.println(testInfo.getTags());
         System.out.println(testInfo.getTestMethod());
-
     }
 
     @AfterEach
