@@ -74,6 +74,10 @@ public class JunitTest extends ConfigJunit{
         assertTrue(simpleString.equals(simple));
         assertTrue(simpleString_2.equals(simpleString_3));
 
+        int a = 1;
+        Integer a_1 = 1;
+
+
     }
 
 
