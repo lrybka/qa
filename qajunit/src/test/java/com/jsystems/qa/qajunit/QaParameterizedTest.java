@@ -43,8 +43,10 @@ public class QaParameterizedTest {
     }
 
     @ParameterizedTest(name = "Parameter test with value {0} and {1}")
-    @CsvFileSource(resources = "/plik.csv")
-    public void fileParameterizedTest(String text, int number) {
+    @CsvFileSource(resources = "/plik.csv", delimiter = ',')
+    public void csvfFileParameterizedTest(String text, int number) {
+        assertTrue(text.contains("Hello"));
+        assertTrue(number % 5 == 0);
 
 
     }
