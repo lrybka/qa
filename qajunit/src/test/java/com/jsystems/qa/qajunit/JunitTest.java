@@ -14,9 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Tag("unit")
 public class JunitTest extends ConfigJunit{
 
-
-
-
     @BeforeEach
     public  void setupEach(TestInfo testInfo){
         System.out.println("==========BeforeEach===========");
@@ -25,8 +22,6 @@ public class JunitTest extends ConfigJunit{
         System.out.println(testInfo.getTestMethod());
 
     }
-
-
 
     @AfterEach
     public  void tearDownEach(){
