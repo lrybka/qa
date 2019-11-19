@@ -12,6 +12,7 @@
 
     <modules>
         <module>qajunit</module>
+        <module>qagui</module>
     </modules>
 
     <properties>
