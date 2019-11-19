@@ -6,6 +6,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import static com.google.common.truth.Truth.assertThat;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 
@@ -59,6 +61,34 @@ public class QaParameterizedTest {
         assertTrue(enumtype.toString().contains("ENUM"));
 
     }
+
+
+    @ParameterizedTest(name = "Test of wordpress powers with value {0}")
+    @ValueSource(strings = {"1", "1000", "10000000"})
+    public void zad1(String text) {
+
+        String resultString = "Wordpress powers " + text + "% of the internet";
+        String expectedString = "Wordpress powers [number]% of the internet";
+
+        assertTrue(resultString.startsWith("Wordpress powers "));
+        assertTrue(resultString.endsWith("% of the internet"));
+        assertThat(resultString).matches("(Wordpress powers )\\d+(% of the internet)");
+
+        String result = resultString.replace("Wordpress powers ", "").replace("% of the internet", "");
+        int resultNumber = Integer.parseInt(result);
+        assertTrue(resultNumber > 0);
+    }
+
+    @ParameterizedTest(name = "Test of wordpress powers with value {0}")
+    @ValueSource(strings = {"f1", "f", "1f", "11fss2"})
+    public void zad1False(String text) {
+
+        String resultString = "Wordpress powers " + text + "% of the internet";
+        String expectedString = "Wordpress powers [number]% of the internet";
+
+        assertFalse(resultString.matches("\"(Wordpress powers )\\d+(% of the internet)\""));
+    }
+
 
     enum ParamEnum {
         ENUM_ONE,
