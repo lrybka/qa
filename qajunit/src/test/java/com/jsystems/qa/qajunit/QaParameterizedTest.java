@@ -1,6 +1,7 @@
 package com.jsystems.qa.qajunit;
 
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -38,6 +39,13 @@ public class QaParameterizedTest {
 
         assertTrue(text.contains("Hello"));
         assertTrue(number % 5 == 0);
+
+    }
+
+    @ParameterizedTest(name = "Parameter test with value {0} and {1}")
+    @CsvFileSource(resources = "/plik.csv")
+    public void fileParameterizedTest(String text, int number) {
+
 
     }
 
