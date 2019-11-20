@@ -1,5 +1,6 @@
 package com.jsystems.qa.qagui;
 
+import com.jsystems.qa.qagui.page.MainWordpressPage;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -33,15 +34,19 @@ public class FrontendTest extends ConfigFrontend {
 
 //        driver.navigate().to("https://www.wordpress.com/");
         driver.navigate().to(Configuration.BASE_URL);   // z uzyciem pliku config.conf
+        MainWordpressPage mainWordpressPage = new MainWordpressPage(driver);
 
-        String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
+
+//        String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(loginIconSelector)));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(mainWordpressPage.loginIcon)));
 
-        WebElement loginIcon = driver.findElement(By.cssSelector(loginIconSelector));
-        wait.until(ExpectedConditions.elementToBeClickable(loginIcon));
+//        WebElement loginIcon = driver.findElement(By.cssSelector(loginIconSelector));
+        wait.until(ExpectedConditions.elementToBeClickable(mainWordpressPage.loginIcon));
 
-        loginIcon.click();
+        mainWordpressPage.loginIcon.click();
+
+
 
         String usernameOrEmailSelector = "usernameOrEmail";
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(usernameOrEmailSelector)));
