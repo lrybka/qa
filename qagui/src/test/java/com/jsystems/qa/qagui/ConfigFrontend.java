@@ -15,14 +15,14 @@ import java.util.concurrent.TimeUnit;
 
 public class ConfigFrontend {
     protected WebDriver driver;
-    
+
     //    String chromePath;
     String fireFoxPath;
     {
         try {
-//            chromePath = Paths.get(getClass().getClassLoader().getResource("drivers/chromedriver.exe")
+//            chromePath = Paths.get(getClass().getClassLoader().getResource("driver/chromedriver.exe")
 //                    .toURI()).toFile().getAbsolutePath();
-            fireFoxPath = Paths.get(getClass().getClassLoader().getResource("drivers/geckodriver.exe")
+            fireFoxPath = Paths.get(getClass().getClassLoader().getResource("driver/geckodriver.exe")
                     .toURI()).toFile().getAbsolutePath();
         } catch (URISyntaxException e) {
             e.printStackTrace();
@@ -39,12 +39,10 @@ public class ConfigFrontend {
     public void setUpEach() throws MalformedURLException {
         setupSystemProperties();
 
-        //driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
+//        driver = new ChromeDriver();
+//        driver = new FirefoxDriver();
 
-        
-
-        if (Configuration.BROWSER.equals("chrome")) {
+        if(Configuration.BROWSER.equals("chrome")) {
             driver = new ChromeDriver();
         } else {
             driver = new FirefoxDriver();
@@ -53,10 +51,9 @@ public class ConfigFrontend {
         setupDriver();
     }
 
-
     private void setupSystemProperties() {
 //        System.setProperty("webdriver.chrome.driver", chromePath);
-        System.setProperty("webdriver.gecko.driver", fireFoxPath);  // ustawienie zminnej dla drivera firefox
+        System.setProperty("webdriver.gecko.driver", fireFoxPath);
     }
 
     private void setupDriver() {
@@ -65,15 +62,12 @@ public class ConfigFrontend {
         driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
     }
 
-
     @AfterEach
-    public void tearDownEach() {   // to co w nawiasach {} dotyczy sie @AfterEach
-        driver.quit();
+    public void tearDownEach() {
+//        driver.quit();
     }
 
-
     private void setUpRemote() {
-
         //        DesiredCapabilities cap = DesiredCapabilities.chrome();
 //        cap.setPlatform(Platform.LINUX);
 //        cap.setVersion("");

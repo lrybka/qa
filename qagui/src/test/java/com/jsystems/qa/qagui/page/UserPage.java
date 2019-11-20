@@ -25,4 +25,16 @@ public class UserPage extends BasePage {
     @FindBy(css = primaryButtonSelector)
     public WebElement saveUserDetailsButton;
 //    WebElement saveUserDetailsButton = driver.findElement(By.cssSelector(primaryButtonSelector));
+
+    public static final String notificationSelector = "span[data-e2e-sidebar=\"Ustawienia powiadomień\"]";
+    @FindBy(css = notificationSelector)
+    public WebElement notificationSideLine;
+
+    public static final String commentSelector = ".section-nav-tabs__list li:nth-child(2)";
+    @FindBy(css = commentSelector)
+    public WebElement commentTopLine;
+
+    public static final String firstCheckboxSelector = "div.notification-settings-form .notification-settings-form__streams .notification-settings-form-stream:nth-child(2) ul li:nth-child(1) input";
+    @FindBy(css = firstCheckboxSelector)
+    public WebElement firstCheckbox;
 }
