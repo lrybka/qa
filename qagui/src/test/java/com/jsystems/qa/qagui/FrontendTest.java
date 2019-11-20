@@ -1,22 +1,13 @@
 package com.jsystems.qa.qagui;
 
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
 import static com.google.common.truth.Truth.assertThat;
-import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("FrontTest")
@@ -40,7 +31,8 @@ public class FrontendTest extends ConfigFrontend {
     @Test
     public void loginTest() {
 
-        driver.navigate().to("https://www.wordpress.com/");
+//        driver.navigate().to("https://www.wordpress.com/");
+        driver.navigate().to(Configuration.BASE_URL);   // z uzyciem pliku config.conf
 
         String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
         WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -57,7 +49,8 @@ public class FrontendTest extends ConfigFrontend {
         WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
 
         usernameInput.clear();
-        usernameInput.sendKeys("lrybka");
+//        usernameInput.sendKeys("lrybka");
+        usernameInput.sendKeys(Configuration.LOGIN);  // z uzyciem pliku config.conf
 
         String primaryButtonSelector = ".button.form-button.is-primary";
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
@@ -68,7 +61,8 @@ public class FrontendTest extends ConfigFrontend {
         WebElement inputPassword = driver.findElement(By.id("password"));
 
         inputPassword.clear();
-        inputPassword.sendKeys("7ujmKO)(");
+//        inputPassword.sendKeys("7ujmKO)(");
+        inputPassword.sendKeys(Configuration.PASSWORD);  // z uzyciem pliku config.conf
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
         WebElement buttonPassword = driver.findElement(By.cssSelector(primaryButtonSelector));
         usernameButton.click();
