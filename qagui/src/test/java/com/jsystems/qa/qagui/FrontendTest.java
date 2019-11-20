@@ -53,7 +53,7 @@ public class FrontendTest extends ConfigFrontend {
         WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
 
         usernameInput.clear();
-        usernameInput.sendKeys("testautomation112019@wp.pl");
+        usernameInput.sendKeys("lukaszrybka1983@gmail.com");
 
         String primaryButtonSelector = ".button.form-button.is-primary";
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
@@ -64,7 +64,7 @@ public class FrontendTest extends ConfigFrontend {
         WebElement inputPassword = driver.findElement(By.id("password"));
 
         inputPassword.clear();
-        inputPassword.sendKeys("testautomation");
+        inputPassword.sendKeys("7ujmKO)(");
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
         WebElement buttonPassword = driver.findElement(By.cssSelector(primaryButtonSelector));
         usernameButton.click();
@@ -81,7 +81,7 @@ public class FrontendTest extends ConfigFrontend {
         WebElement userDisplayName = driver.findElement(By.cssSelector(userDisplayNameSelector));
         String userDisplayNameText = userDisplayName.getText();
 
-        assertThat(userDisplayNameText).isEqualTo("testautomation112019");
+        assertThat(userDisplayNameText).isEqualTo("lrybka");
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(primaryButtonSelector)));
         WebElement saveUserDetailsButton = driver.findElement(By.cssSelector(primaryButtonSelector));
