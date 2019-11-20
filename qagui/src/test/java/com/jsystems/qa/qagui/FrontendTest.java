@@ -32,7 +32,7 @@ public class FrontendTest extends ConfigFrontend {
         WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
 
         usernameInput.clear();
-        usernameInput.sendKeys("testautomation112019@wp.pl");
+        usernameInput.sendKeys("lukaszrybka1983@gmail.com");
 
         String primaryButtonSelector = ".button.form-button.is-primary";
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
@@ -43,7 +43,7 @@ public class FrontendTest extends ConfigFrontend {
         WebElement inputPassword = driver.findElement(By.id("password"));
 
         inputPassword.clear();
-        inputPassword.sendKeys("testautomation");
+        inputPassword.sendKeys("7ujmKO)(");
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
         WebElement buttonPassword = driver.findElement(By.cssSelector(primaryButtonSelector));
         usernameButton.click();
