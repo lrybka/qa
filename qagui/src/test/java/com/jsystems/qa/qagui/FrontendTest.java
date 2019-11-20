@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.google.common.truth.Truth.assertThat;
+import static com.jsystems.qa.qagui.page.MainWordpressPage.loginIconSelector;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Tag("FrontTest")
@@ -39,13 +40,13 @@ public class FrontendTest extends ConfigFrontend {
 
 //        String loginIconSelector = ".x-nav-item.x-nav-item--wide.x-nav-item--logged-in";
         WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(mainWordpressPage.loginIcon)));
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(loginIconSelector)));
 
 //        WebElement loginIcon = driver.findElement(By.cssSelector(loginIconSelector));
         wait.until(ExpectedConditions.elementToBeClickable(mainWordpressPage.loginIcon));
 
         mainWordpressPage.loginIcon.click();
-
 
 
         String usernameOrEmailSelector = "usernameOrEmail";
