@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ConfigFrontend {
     protected WebDriver driver;
-
+    
     //    String chromePath;
     String fireFoxPath;
     {
