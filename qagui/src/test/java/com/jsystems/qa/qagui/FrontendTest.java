@@ -57,7 +57,7 @@ public class FrontendTest extends ConfigFrontend {
         WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
 
         usernameInput.clear();
-        usernameInput.sendKeys("lukaszrybka1983@gmail.com");
+        usernameInput.sendKeys("lrybka");
 
         String primaryButtonSelector = ".button.form-button.is-primary";
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
