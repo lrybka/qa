@@ -42,7 +42,7 @@ public class ConfigFrontend {
         //driver = new ChromeDriver();
         //driver = new FirefoxDriver();
 
-
+        
 
         if (Configuration.BROWSER.equals("chrome")) {
             driver = new ChromeDriver();
