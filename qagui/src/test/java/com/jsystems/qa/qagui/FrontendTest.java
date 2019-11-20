@@ -19,7 +19,7 @@ import static com.google.common.truth.Truth.assertThat;
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@Tag("FronTest")
+@Tag("FrontTest")
 public class FrontendTest extends ConfigFrontend {
 
 
