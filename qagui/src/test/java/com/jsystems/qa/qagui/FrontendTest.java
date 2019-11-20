@@ -1,5 +1,6 @@
 package com.jsystems.qa.qagui;
 
+import com.jsystems.qa.qagui.page.LoginPage;
 import com.jsystems.qa.qagui.page.MainWordpressPage;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static com.google.common.truth.Truth.assertThat;
+import static com.jsystems.qa.qagui.page.LoginPage.primaryButtonSelector;
+import static com.jsystems.qa.qagui.page.LoginPage.usernameOrEmailSelector;
 import static com.jsystems.qa.qagui.page.MainWordpressPage.loginIconSelector;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -48,20 +51,20 @@ public class FrontendTest extends ConfigFrontend {
 
         mainWordpressPage.loginIcon.click();
 
-
-        String usernameOrEmailSelector = "usernameOrEmail";
+        LoginPage loginPage = new LoginPage(driver);
+//        String usernameOrEmailSelector = "usernameOrEmail";
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(usernameOrEmailSelector)));
 
-        WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
+//        WebElement usernameInput = driver.findElement(By.id(usernameOrEmailSelector));
 
-        usernameInput.clear();
+        loginPage.usernameInput.clear();
 //        usernameInput.sendKeys("lrybka");
-        usernameInput.sendKeys(Configuration.LOGIN);  // z uzyciem pliku config.conf
+        loginPage.usernameInput.sendKeys(Configuration.LOGIN);  // z uzyciem pliku config.conf
 
-        String primaryButtonSelector = ".button.form-button.is-primary";
+//        String primaryButtonSelector = ".button.form-button.is-primary";
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(primaryButtonSelector)));
         WebElement usernameButton = driver.findElement(By.cssSelector(primaryButtonSelector));
-        usernameButton.click();
+        loginPage.usernameButton.click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.id("password")));
         WebElement inputPassword = driver.findElement(By.id("password"));
