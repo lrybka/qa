@@ -50,7 +50,7 @@ public class ConfigFrontend {
 
     private void setupSystemProperties() {
 //        System.setProperty("webdriver.chrome.driver", chromePath);
-        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+        System.setProperty("webdriver.gecko.driver", fireFoxPath);  // ustawienie zminnej dla drivera firefox
     }
 
     private void setupDriver() {
