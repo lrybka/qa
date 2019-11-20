@@ -44,7 +44,7 @@ public class ConfigFrontend {
     }
 
     @AfterEach
-    public void tearDownEach() {
+    public void tearDownEach() {   // to co w nawiasach {} dotyczy sie @AfterEach
         driver.quit();
     }
 
