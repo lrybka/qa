@@ -22,6 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Tag("FronTest")
 public class FrontendTest extends ConfigFrontend {
 
+
     @Test
     public void frontTest() {
         driver.get("https://wordpress.com/");
