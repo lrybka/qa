@@ -6,23 +6,14 @@ import com.jsystems.qa.qagui.page.UserPage;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 
 import static com.google.common.truth.Truth.assertThat;
 import static com.jsystems.qa.qagui.page.LoginPage.*;
 import static com.jsystems.qa.qagui.page.MainWordpressPage.loginIconSelector;
 import static com.jsystems.qa.qagui.page.UserPage.userAvatarSelector;
 import static com.jsystems.qa.qagui.page.UserPage.userDisplayNameSelector;
-import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
