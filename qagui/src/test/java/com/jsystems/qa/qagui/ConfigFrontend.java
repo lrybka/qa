@@ -64,7 +64,7 @@ public class ConfigFrontend {
 
     @AfterEach
     public void tearDownEach() {
-//        driver.quit();
+        driver.quit();
     }
 
     private void setUpRemote() {
