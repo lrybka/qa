@@ -85,7 +85,8 @@ public class FrontendTest extends ConfigFrontend {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(primaryButtonSelector)));
         WebElement saveUserDetailsButton = driver.findElement(By.cssSelector(primaryButtonSelector));
-        assertThat(!saveUserDetailsButton.isDisplayed());
+        assertThat(saveUserDetailsButton.isDisplayed());
+        assertThat(!saveUserDetailsButton.isEnabled());
     }
 
 }
