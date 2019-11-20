@@ -36,13 +36,31 @@ public class ConfigFrontend {
 
     @BeforeEach
     public void setUpEach() throws MalformedURLException {
-//        System.setProperty("webdriver.chrome.driver", chromePath);
-        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+        setupSystemProperties();
 
         driver = new FirefoxDriver();
 
         setupDriver();
-//        DesiredCapabilities cap = DesiredCapabilities.chrome();
+    }
+
+    @AfterEach
+    public void tearDownEach() {
+        driver.quit();
+    }
+
+    private void setupSystemProperties() {
+//        System.setProperty("webdriver.chrome.driver", chromePath);
+        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+    }
+
+    private void setupDriver() {
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+    }
+
+    private void setUpRemote() {
+        //        DesiredCapabilities cap = DesiredCapabilities.chrome();
 //        cap.setPlatform(Platform.LINUX);
 //        cap.setVersion("");
 //
@@ -58,21 +76,4 @@ public class ConfigFrontend {
 //            e.printStackTrace();
 //        }
     }
-
-    @AfterEach
-    public void tearDownEach() {
-        driver.quit();
-    }
-
-    private void setupSystemProperties() {
-//        System.setProperty("webdriver.chrome.driver", chromePath);
-        System.setProperty("webdriver.gecko.driver", fireFoxPath);
-    }
-
-    protected void setupDriver() {
-        driver.manage().window().maximize();
-        driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
-    }
-
 }
