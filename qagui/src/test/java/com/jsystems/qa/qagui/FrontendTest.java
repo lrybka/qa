@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class FrontendTest extends ConfigFrontend {
 
     @Test
-    public void frontTest() {k
+    public void frontTest() {
         driver.get(Configuration.BASE_URL);
 //        WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
         MainWordpressPage mainWordpressPage = new MainWordpressPage(driver);
