@@ -17,7 +17,8 @@ public class UserService {
                 .extract()
                 .body()
                 .jsonPath()
-                .getList("", User.class);
+                .getList("", User.class)
+                ;
 
     }
 }

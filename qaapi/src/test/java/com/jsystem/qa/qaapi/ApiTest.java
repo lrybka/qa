@@ -27,7 +27,8 @@ public class ApiTest {
                 .assertThat()
                 .statusCode(200)
                 .body("name",equalTo("Piotr"))
-                .body("surname",equalTo("Kowalski"));
+                .body("surname",equalTo("Kowalski"))
+        ;
     }
 
 
