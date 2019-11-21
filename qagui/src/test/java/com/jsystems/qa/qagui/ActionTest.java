@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
+import static org.junit.Assert.assertTrue;
+
 @Tag("FrontTest")
 public class ActionTest extends ConfigFrontend {
 
@@ -41,11 +43,13 @@ public class ActionTest extends ConfigFrontend {
         action.moveToElement(loginPage.usernameInput)
                 .sendKeys(Configuration.LOGIN)
                 .moveToElement(loginPage.usernameButton)
-                // jak po . klikniecie Ctrl + space to rozwinie wam się lista dostępnych metod z klasy Actions
+                // jak po . klikniecie "Ctrl + space" to rozwinie wam się lista dostępnych metod z klasy Actions
                 .click()
                 .build().perform();
 
         loginPage.waitForElementToBeVisibility(loginPage.inputPassword, 15);
+        assertTrue(loginPage.inputPassword.isDisplayed());
+
     }
 
 
