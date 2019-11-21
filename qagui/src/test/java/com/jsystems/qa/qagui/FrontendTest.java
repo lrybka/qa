@@ -35,6 +35,7 @@ public class FrontendTest extends ConfigFrontend {
 
     }
 
+    
     @Test
     public void loginTest() {
         driver.navigate().to(Configuration.BASE_URL);
