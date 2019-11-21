@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Set;
 
+import static java.lang.Thread.sleep;
+
 public class WindowsTest extends ConfigFrontend {
     @Test
     public void testWindows() throws InterruptedException {
@@ -42,11 +44,13 @@ public class WindowsTest extends ConfigFrontend {
 
         Set<String> testPageWindowHandle = driver.getWindowHandles();
 
+
         for (String windowHandle : testPageWindowHandle) {
             if (!firstPageWindowHandle.equals(windowHandle)) {
                 secondTestWindowHandle = windowHandle;
             }
         }
+
 
         driver.switchTo().window(secondTestWindowHandle);
 
