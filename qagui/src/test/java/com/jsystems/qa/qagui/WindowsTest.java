@@ -98,8 +98,8 @@ public class WindowsTest extends ConfigFrontend {
                 .until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Open page in the same window")));
 
         WebElement hyperLinkElement = driver.findElement(By.linkText("Open page in the same window"));
-        int hyperlinkYCoordinate = hyperLinkElement.getLocation().getY();
 
+        int hyperlinkYCoordinate = hyperLinkElement.getLocation().getY();
         int hyperlinkXCoordinate = hyperLinkElement.getLocation().getX();
 
         JavascriptExecutor jsexecutor = (JavascriptExecutor) driver;
