@@ -27,8 +27,10 @@ public class WindowsTest extends ConfigFrontend {
         firstPageWindowHandle = driver.getWindowHandle();
 
 
-        int hyperlinkYCoordinate = driver.findElement(By.linkText("Open page in a new window")).getLocation().getY();
-        int hyperlinkXCoordinate = driver.findElement(By.linkText("Open page in a new window")).getLocation().getX();
+        WebElement hyperLinkElement = driver.findElement(By.linkText("Open page in a new window"));
+
+        int hyperlinkXCoordinate = hyperLinkElement.getLocation().getX();
+        int hyperlinkYCoordinate = hyperLinkElement.getLocation().getY();
 
         JavascriptExecutor jsexecutor = (JavascriptExecutor) driver;
         jsexecutor.executeScript("window.scrollBy(" + hyperlinkXCoordinate + "," + hyperlinkYCoordinate + ")", "");
@@ -36,7 +38,7 @@ public class WindowsTest extends ConfigFrontend {
         new WebDriverWait(driver, 100)
                 .until(ExpectedConditions.elementToBeClickable(By.linkText("Open page in a new window")));
 
-        driver.findElement(By.linkText("Open page in a new window")).click();
+        hyperLinkElement.click();
 
         Set<String> testPageWindowHandle = driver.getWindowHandles();
 
@@ -95,9 +97,10 @@ public class WindowsTest extends ConfigFrontend {
         new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Open page in the same window")));
 
-        int hyperlinkYCoordinate = driver.findElement(By.linkText("Open page in the same window")).getLocation().getY();
+        WebElement hyperLinkElement = driver.findElement(By.linkText("Open page in the same window"));
+        int hyperlinkYCoordinate = hyperLinkElement.getLocation().getY();
 
-        int hyperlinkXCoordinate = driver.findElement(By.linkText("Open page in the same window")).getLocation().getX();
+        int hyperlinkXCoordinate = hyperLinkElement.getLocation().getX();
 
         JavascriptExecutor jsexecutor = (JavascriptExecutor) driver;
         jsexecutor.executeScript("window.scrollBy(" + hyperlinkXCoordinate + "," + hyperlinkYCoordinate + ")", "");
@@ -105,7 +108,7 @@ public class WindowsTest extends ConfigFrontend {
         new WebDriverWait(driver, 100)
                 .until(ExpectedConditions.elementToBeClickable(By.linkText("Open page in the same window")));
 
-        driver.findElement(By.linkText("Open page in the same window")).click();
+        hyperLinkElement.click();
     }
 
     @Test
