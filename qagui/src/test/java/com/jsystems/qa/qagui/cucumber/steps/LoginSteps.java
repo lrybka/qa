@@ -19,11 +19,11 @@ public class LoginSteps {
 
     }
 
-    @When("User logs to the user panel")
+    @When("^User logs to the user panel$")
     public void userLogsToTheUserPanel() {
     }
 
-    @Then("User can modify user profile")
+    @Then("^User can modify user profile$")
     public void userCanModifyUserProfile() {
     }
 }
