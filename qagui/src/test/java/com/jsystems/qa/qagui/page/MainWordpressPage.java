@@ -14,8 +14,8 @@ public class MainWordpressPage extends BasePage {
     }
 
     public static final String textElementSelector = "h1.lpc-headline-title span:nth-child(1)";
-
-//    @FindBy(css = "h1.lpc-headline-title span:nth-child(1)")
+    //    @FindBy(css = "h1.lpc-headline-title span:nth-child(1)")
+    @FindBy(css = textElementSelector)
     private WebElement textElement_1;
 //    public WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
 
@@ -29,9 +29,9 @@ public class MainWordpressPage extends BasePage {
     public WebElement loginIcon;
 //    public WebElement loginIcon = driver.findElement(By.cssSelector(loginIconSelector));
 
+
     public WebElement getTextElement_1() {
         waitForElementToBeVisibility(By.cssSelector(textElementSelector));
         return textElement_1;
     }
-
 }
