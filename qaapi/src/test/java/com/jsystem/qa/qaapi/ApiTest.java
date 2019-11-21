@@ -5,6 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
+import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
@@ -46,7 +49,7 @@ public class ApiTest {
     @Test
     @DisplayName("Should returns correctly list of users using jsonPath mapping")
     public void jsonPathTest(){
-        RestAssured
+        List<User> users = RestAssured
                 .given()
                 .get("http://www.mocky.io/v2/5a6a58222e0000d0377a7789")
                 .then()
@@ -56,6 +59,13 @@ public class ApiTest {
                 .body()
                 .jsonPath()
                 .getList("", User.class);
+
+        assertTrue(users.get(0).imie.equals("Piotr"));
+        assertTrue(users.get(0).nazwisko.equals("Kowalski"));
+        assertTrue(users.get(0).device.get(0).type.equals("computer"));
+        assertTrue(users.get(0).device.get(0).deviceModel.get(0).screenSize == 17);
+        assertTrue(users.size() > 0);
+
 
     }
 
