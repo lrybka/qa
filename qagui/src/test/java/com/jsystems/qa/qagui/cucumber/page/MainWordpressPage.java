@@ -1,5 +1,7 @@
-package com.jsystems.qa.qagui.page;
+package com.jsystems.qa.qagui.cucumber.page;
 
+import com.jsystems.qa.qagui.classic.page.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,8 +14,10 @@ public class MainWordpressPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "h1.lpc-headline-title span:nth-child(1)")
-    public WebElement textElement_1;
+    public static final String textElementSelector = "h1.lpc-headline-title span:nth-child(1)";
+    //    @FindBy(css = "h1.lpc-headline-title span:nth-child(1)")
+    @FindBy(css = textElementSelector)
+    private WebElement textElement_1;
 //    public WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
 
     @FindBy(css = "h1.lpc-headline-title span:nth-child(2)")
@@ -26,4 +30,9 @@ public class MainWordpressPage extends BasePage {
     public WebElement loginIcon;
 //    public WebElement loginIcon = driver.findElement(By.cssSelector(loginIconSelector));
 
+
+    public WebElement getTextElement_1() {
+        waitForElementToBeVisibility(By.cssSelector(textElementSelector));
+        return textElement_1;
+    }
 }
