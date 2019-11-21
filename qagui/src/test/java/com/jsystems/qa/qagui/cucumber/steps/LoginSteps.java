@@ -14,7 +14,7 @@ public class LoginSteps {
         driver = configStepCucumber.setUp();
     }
 
-    @Given("^User starts on main page$")
+    @Given("^User starts on main page$")     //    ^ (musi zaczynac sie od tego)    $ (musi konczyc sie na tym)
     public void userStartsOnMainPage(){
 
     }
