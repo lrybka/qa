@@ -26,6 +26,7 @@ public class WindowsTest extends ConfigFrontend {
 
         firstPageWindowHandle = driver.getWindowHandle();
 
+
         int hyperlinkYCoordinate = driver.findElement(By.linkText("Open page in a new window")).getLocation().getY();
         int hyperlinkXCoordinate = driver.findElement(By.linkText("Open page in a new window")).getLocation().getX();
 
