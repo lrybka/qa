@@ -89,7 +89,7 @@ public class FrontendTest extends ConfigFrontend {
 //        WebElement userDisplayName = driver.findElement(By.cssSelector(userDisplayNameSelector));
         String userDisplayNameText = userPage.userDisplayName.getText();
 
-        assertThat(userDisplayNameText).isEqualTo("lrybka");
+        assertThat(userDisplayNameText).isEqualTo("lrybka   ");
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(UserPage.primaryButtonSelector)));
 //        WebElement saveUserDetailsButton = driver.findElement(By.cssSelector(primaryButtonSelector));
