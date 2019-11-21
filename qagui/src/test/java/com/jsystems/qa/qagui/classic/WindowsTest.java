@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Set;
 
+import static java.lang.Thread.sleep;
+
 public class WindowsTest extends ConfigFrontend {
     @Test
     public void testWindows() throws InterruptedException {
