@@ -13,6 +13,7 @@
     <modules>
         <module>qajunit</module>
         <module>qagui</module>
+        <module>qaapi</module>
     </modules>
 
     <properties>
