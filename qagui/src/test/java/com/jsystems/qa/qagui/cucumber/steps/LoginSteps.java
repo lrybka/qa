@@ -53,7 +53,7 @@ public class LoginSteps {
         loginPage.inputPassword.sendKeys(Configuration.PASSWORD);
         loginPage.waitForElementToBeClickable(By.cssSelector(primaryButtonSelector));
         loginPage.usernameButton.click();
-        UserPage userPage = new UserPage(driver);
+        userPage = new UserPage(driver);
     }
 
     @Then("^User can modify user profile$")
