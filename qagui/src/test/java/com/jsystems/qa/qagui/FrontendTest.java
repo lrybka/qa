@@ -25,7 +25,7 @@ public class FrontendTest extends ConfigFrontend {
         driver.get(Configuration.BASE_URL);
 //        WebElement textElement_1 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(1)"));
         MainWordpressPage mainWordpressPage = new MainWordpressPage(driver);
-        String text1 = mainWordpressPage.textElement_1.getText();
+        String text1 = mainWordpressPage.getTextElement_1().getText();
         assertTrue(text1.equals("WordPress powers"));
 
 //        WebElement textElement_2 = driver.findElement(By.cssSelector("h1.lpc-headline-title span:nth-child(2)"));
@@ -35,7 +35,7 @@ public class FrontendTest extends ConfigFrontend {
 
     }
 
-    
+
     @Test
     public void loginTest() {
         driver.navigate().to(Configuration.BASE_URL);
