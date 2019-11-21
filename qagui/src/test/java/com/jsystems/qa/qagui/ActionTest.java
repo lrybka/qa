@@ -56,7 +56,7 @@ public class ActionTest extends ConfigFrontend {
     @Test
     public void testBasicRInteraction() {
         Actions do42 = new Actions(driver);
-        do42.sendKeys(Keys.chord(Keys.CONTROL, "l"));
+        do42.sendKeys(Keys.chord(Keys.CONTROL, "l"));  //wciśniecie i przytrzymanie klawiszy Ctrl oraz 1
         do42.sendKeys(Keys.ESCAPE);
         do42.sendKeys("41 + 1");
         do42.sendKeys(Keys.ENTER);
