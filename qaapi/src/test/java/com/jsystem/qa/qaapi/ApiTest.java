@@ -1,5 +1,6 @@
 package com.jsystem.qa.qaapi;
 
+import com.jsystem.qa.qaapi.model.User;
 import com.jsystem.qa.qaapi.service.UserService;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.DisplayName;

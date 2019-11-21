@@ -1,4 +1,4 @@
-package com.jsystem.qa.qaapi;
+package com.jsystem.qa.qaapi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -10,6 +10,6 @@ public class Device {
     public String type;
 
     @JsonProperty(value = "device.model", required = true)
-    List<DeviceModel> deviceModel;
+    public List<DeviceModel> deviceModel;
 
 }
