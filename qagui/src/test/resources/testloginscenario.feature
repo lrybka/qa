@@ -7,3 +7,4 @@ Feature: User panel
     Then User can modify user profile
 
 
+
