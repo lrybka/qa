@@ -15,4 +15,5 @@ public class User {
     @JsonProperty(required = true)
     public List<Device> device;
 
+
 }

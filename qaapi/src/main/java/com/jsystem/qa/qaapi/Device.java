@@ -10,6 +10,6 @@ public class Device {
     public String type;
 
     @JsonProperty(value = "device.model", required = true)
-    List<DeviceModel>  deviceModel;
+    List<DeviceModel> deviceModel;
 
 }
