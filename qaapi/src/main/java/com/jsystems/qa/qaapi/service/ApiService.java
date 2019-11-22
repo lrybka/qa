@@ -1,5 +1,6 @@
 package com.jsystems.qa.qaapi.service;
 
+import com.jsystems.qa.qaapi.model.azure.AzureAuthor;
 import com.jsystems.qa.qaapi.model.device.User;
 import com.jsystems.qa.qaapi.model.error.ErrorResponse;
 import com.jsystems.qa.qaapi.model.user.MyUser;
@@ -132,5 +133,19 @@ public class ApiService {
                 .body()
                 .as(UserAzure.class);
 
+    }
+
+    public static List<AzureAuthor> getAzureAuthors() {
+        return RestAssured.given()
+                .spec(Specification.fakeAzureSpecBuilder())
+                .when()
+                .get("api/Authors")
+                .then()
+                .assertThat()
+                .statusCode(200)
+                .extract()
+                .body()
+                .jsonPath()
+                .getList("", AzureAuthor.class);
     }
 }
