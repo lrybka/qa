@@ -8,6 +8,7 @@ import com.jsystems.qa.qaapi.model.user.MyUser;
 import com.jsystems.qa.qaapi.model.user.UserAzure;
 import com.jsystems.qa.qaapi.model.user.UserDb;
 import com.jsystems.qa.qaapi.service.api.ApiService;
+import com.jsystems.qa.qaapi.service.azure.AuthorService;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -121,7 +122,7 @@ public class ApiTest {
     @Test
     @DisplayName("Get azure authors")
     public void shouldReturnAllAzureAuthorsLst(){
-        List<AzureAuthor> azureAuthors = ApiService.getAzureAuthors();
+        List<AzureAuthor> azureAuthors = AuthorService.getAzureAuthors();
 
         assertThat(azureAuthors.size()).isGreaterThan(0);
 
