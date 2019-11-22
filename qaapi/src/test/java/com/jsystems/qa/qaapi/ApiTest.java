@@ -111,5 +111,6 @@ public class ApiTest {
     public void dbTest() {
         UserDb userDb = UserDao.getOneById(1L);
         assertThat(userDb.getName()).isEqualTo("Piotr");
+        System.out.println(UserDao.getOneById(1L).getId() +": "+  UserDao.getOneById(1L).getName() +"."+ UserDao.getOneById(1L).getSurname());
     }
 }
