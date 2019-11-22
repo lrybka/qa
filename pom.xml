@@ -24,12 +24,13 @@
     </properties>
 
     <dependencyManagement>
+
         <dependencies>
             <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter-api</artifactId>
-                <version>5.5.2</version>
+                <version>${junit.jupiter.api}</version>
                 <scope>test</scope>
             </dependency>
             <!-- https://mvnrepository.com/artifact/com.google.truth/truth -->
@@ -62,9 +63,8 @@
             <dependency>
                 <groupId>io.github.bonigarcia</groupId>
                 <artifactId>webdrivermanager</artifactId>
-                <version>3.7.1</version>
+                <version>3.6.1</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
@@ -83,12 +83,14 @@
                 <version>4.12</version>
                 <scope>test</scope>
             </dependency>
+
             <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
             <dependency>
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-java</artifactId>
                 <version>4.5.2</version>
             </dependency>
+
             <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
             <dependency>
                 <groupId>io.cucumber</groupId>
@@ -96,6 +98,7 @@
                 <version>4.5.2</version>
                 <scope>test</scope>
             </dependency>
+
             <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
             <dependency>
                 <groupId>io.cucumber</groupId>
