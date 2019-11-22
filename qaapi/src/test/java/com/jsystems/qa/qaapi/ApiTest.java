@@ -121,9 +121,17 @@ public class ApiTest {
     @Test
     @DisplayName("Get azure authors")
     public void shouldReturnAllAzureAuthorsLst(){
-        List<AzureAuthor> azureAuthor = ApiService.getAzureAuthors();
+        List<AzureAuthor> azureAuthors = ApiService.getAzureAuthors();
 
-        assertThat(azureAuthor.size()).isGreaterThan(0);
+        assertThat(azureAuthors.size()).isGreaterThan(0);
+
+
+        for (AzureAuthor azureAuthor : azureAuthors) {
+            int firstNameId = Integer.parseInt(azureAuthor.firstName.replace("First Name ", ""));
+            assertThat(azureAuthor.firstName).contains("First Name ");
+            assertThat(azureAuthor.firstName).matches("First Name \\d*");
+            assertTrue(azureAuthor.id == firstNameId);
+        }
 
     }
 

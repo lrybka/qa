@@ -16,4 +16,5 @@ public class AzureAuthor {
     @JsonProperty(value = "LastName", required = true)
     public String lastName;
 
+
 }
