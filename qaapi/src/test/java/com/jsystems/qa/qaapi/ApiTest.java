@@ -162,16 +162,16 @@ public class ApiTest {
     @Test
     @DisplayName("Save user DB")
     public void saveUserDb(){
-        UserDb userDb = new UserDb(4L, "Arnold", "Kowalski");
+        UserDb userDb = new UserDb(6L, "Arnold", "Kowalski");
         UserDao.SaveUser(userDb);
 
-        UserDb userdb_1 = UserDao.getOneById(4L);
+        UserDb userdb_1 = UserDao.getOneById(6L);
 
         assertTrue(userdb_1.getId() == userDb.getId());
         assertTrue(userdb_1.getName().equals(userDb.getName()));
         assertTrue(userdb_1.getSurname().equals(userDb.getSurname()));
 
-        UserDao.deleteUser((userdb_1.getId()));
+        UserDao.deleteUser(userdb_1.getId());
 
     }
 }
