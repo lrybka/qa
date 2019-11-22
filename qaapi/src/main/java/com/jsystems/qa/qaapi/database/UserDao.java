@@ -59,6 +59,18 @@ public class UserDao {
         }
         return userDbs;
     }
+
+    public static void SaveUser(UserDb userDb) {
+        String sql = "insert into testuser (id, name, surname) values (" + userDb.getId() +
+                ", '" + userDb.getName() + "',' '" + userDb.getSurname() + "')";
+        try {
+            Statement statement = DatabaseConnector.getConnection().createStatement();
+            statement.executeUpdate(sql);
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 

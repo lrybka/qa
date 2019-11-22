@@ -158,4 +158,18 @@ public class ApiTest {
         System.out.println(userDbs);
 
     }
+
+    @Test
+    @DisplayName("Save user DB")
+    public void saveUserDb(){
+        UserDb userDb = new UserDb(4L, "Arnold", "Kowalski");
+        UserDao.SaveUser(userDb);
+
+        UserDb userdb_1 = UserDao.getOneById(4L);
+
+        assertTrue(userdb_1.getId() == userDb.getId());
+        assertTrue(userdb_1.getName().equals(userDb.getName()));
+        assertTrue(userdb_1.getSurname().equals(userDb.getSurname()));
+
+    }
 }
