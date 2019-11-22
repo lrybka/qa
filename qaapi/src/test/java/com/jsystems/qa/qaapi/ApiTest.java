@@ -118,7 +118,6 @@ public class ApiTest {
         UserDb userDb = UserDao.getOneById(1L);
         assertThat(userDb.getName()).isEqualTo("Piotr");
 
-
             System.out.println(UserDao.getOneById(1L).getId() + ": " + UserDao.getOneById(1L).getName() + "." + UserDao.getOneById(1L).getSurname());
             System.out.println(UserDao.getOneById(2L).getId() + ": " + UserDao.getOneById(2L).getName() + "." + UserDao.getOneById(2L).getSurname());
             System.out.println(UserDao.getOneById(3L).getId() + ": " + UserDao.getOneById(3L).getName() + "." + UserDao.getOneById(3L).getSurname());
@@ -156,6 +155,6 @@ public class ApiTest {
     @DisplayName("Get all users")
     public void getAllUserDb(){
         List<UserDb> userDbs = UserDao.getAllUsers();
-        System.out.println();
+        System.out.println(userDbs);
     }
 }
