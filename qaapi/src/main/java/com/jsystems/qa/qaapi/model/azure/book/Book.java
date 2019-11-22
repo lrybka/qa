@@ -2,8 +2,6 @@ package com.jsystems.qa.qaapi.model.azure.book;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.Date;
-
 public class Book {
 
     @JsonProperty(value = "ID", required = true)
