@@ -9,18 +9,19 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-
     <modules>
         <module>qajunit</module>
-        <module>qagui</module>
         <module>qaapi</module>
+        <module>qagui</module>
     </modules>
 
     <properties>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <tags>UnitTest,FrontTest,ApiTest</tags>
+        <tags></tags>
+        <exTags></exTags>
+        <junit.jupiter.api>5.5.2</junit.jupiter.api>
     </properties>
 
     <dependencyManagement>
@@ -180,11 +181,11 @@
                         <artifactId>junit-jupiter-engine</artifactId>
                         <version>5.4.2</version>
                     </dependency>
-
                 </dependencies>
                 <configuration>
                     <properties>
                         <includeTags>${tags}</includeTags>
+                        <excludeTags>${exTags}</excludeTags>
                     </properties>
                     <includes>
                         <include>**/*Test.java</include>
@@ -193,5 +194,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
