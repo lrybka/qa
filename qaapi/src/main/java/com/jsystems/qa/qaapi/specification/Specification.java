@@ -28,7 +28,8 @@ public class Specification {
     public static RequestSpecification fakeAzureSpecBuilder() {
         return new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
-                .setBaseUri("http://fakerestapi.azurewebsites.net")
+                .setBaseUri(ApiConfig.BASE_AZURE_HOST)
+//                .setBaseUri("http://fakerestapi.azurewebsites.net")
                 .build();
     }
 }

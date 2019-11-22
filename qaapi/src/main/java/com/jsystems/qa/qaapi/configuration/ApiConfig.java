@@ -10,6 +10,7 @@ public class ApiConfig {
     private static final Config ENV = CONFIG.getConfig("environments").getConfig(ENVIRONMENT);
 
     public static final String BASE_URL = ENV.getString("baseUrl");
+    public static final String BASE_AZURE_HOST = ENV.getString("baseAzureHost");
 
     public static final String DB_CLASS = ENV.getString("dbClass");
     public static final String DB_URL = ENV.getString("dbUrl");
