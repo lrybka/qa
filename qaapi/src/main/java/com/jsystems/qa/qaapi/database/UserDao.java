@@ -62,7 +62,7 @@ public class UserDao {
 
     public static void SaveUser(UserDb userDb) {
         String sql = "insert into testuser (id, name, surname) values (" + userDb.getId() +
-                ", '" + userDb.getName() + "',' '" + userDb.getSurname() + "')";
+                ", '" + userDb.getName() + "', '" + userDb.getSurname() + "')";
         try {
             Statement statement = DatabaseConnector.getConnection().createStatement();
             statement.executeUpdate(sql);
