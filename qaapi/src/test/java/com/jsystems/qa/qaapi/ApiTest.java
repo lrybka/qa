@@ -2,6 +2,7 @@ package com.jsystems.qa.qaapi;
 
 import com.jsystems.qa.qaapi.database.UserDao;
 import com.jsystems.qa.qaapi.model.azure.author.AzureAuthor;
+import com.jsystems.qa.qaapi.model.azure.book.Book;
 import com.jsystems.qa.qaapi.model.device.User;
 import com.jsystems.qa.qaapi.model.error.ErrorResponse;
 import com.jsystems.qa.qaapi.model.user.MyUser;
@@ -9,6 +10,7 @@ import com.jsystems.qa.qaapi.model.user.UserAzure;
 import com.jsystems.qa.qaapi.model.user.UserDb;
 import com.jsystems.qa.qaapi.service.api.ApiService;
 import com.jsystems.qa.qaapi.service.azure.AuthorService;
+import com.jsystems.qa.qaapi.service.azure.BookService;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -136,4 +138,15 @@ public class ApiTest {
 
     }
 
+    @Test
+    @DisplayName("POST Book test")
+    public void postBookTest(){
+
+        Book book = new Book(1,"Jsystems", "Szkolenia", 382, "en", "2019-11-22T09:41:54.400Z");
+        BookService.postBook(book, 200);
+
+
+
+
+    }
 }

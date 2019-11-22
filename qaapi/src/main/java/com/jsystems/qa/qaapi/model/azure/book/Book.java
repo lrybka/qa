@@ -22,4 +22,16 @@ public class Book {
     @JsonProperty(value = "PublishDate", required = true)
     public String publishDate;
 
+    public Book(long id, String title, String description, int pageCount, String excerpt, String publishDate) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.pageCount = pageCount;
+        this.excerpt = excerpt;
+        this.publishDate = publishDate;
+    }
+
+    public Book() {
+    }
+
 }
