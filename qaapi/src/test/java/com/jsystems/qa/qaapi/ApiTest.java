@@ -112,5 +112,8 @@ public class ApiTest {
         UserDb userDb = UserDao.getOneById(1L);
         assertThat(userDb.getName()).isEqualTo("Piotr");
         System.out.println(UserDao.getOneById(1L).getId() +": "+  UserDao.getOneById(1L).getName() +"."+ UserDao.getOneById(1L).getSurname());
+        System.out.println(UserDao.getOneById(2L).getId() +": "+  UserDao.getOneById(2L).getName() +"."+ UserDao.getOneById(2L).getSurname());
+        System.out.println(UserDao.getOneById(3L).getId() +": "+  UserDao.getOneById(3L).getName() +"."+ UserDao.getOneById(3L).getSurname());
+        System.out.println(UserDao.getOneById(4L).getId() +": "+  UserDao.getOneById(4L).getName() +"."+ UserDao.getOneById(4L).getSurname());
     }
 }
