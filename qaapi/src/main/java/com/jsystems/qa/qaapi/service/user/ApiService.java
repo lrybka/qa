@@ -135,17 +135,17 @@ public class ApiService {
 
     }
 
-    public static List<AzureAuthor> getAzureAuthors() {
-        return RestAssured.given()
-                .spec(Specification.fakeAzureSpecBuilder())
-                .when()
-                .get("api/Authors")
-                .then()
-                .assertThat()
-                .statusCode(200)
-                .extract()
-                .body()
-                .jsonPath()
-                .getList("", AzureAuthor.class);
-    }
+//    public static List<AzureAuthor> getAzureAuthors() {
+//        return RestAssured.given()
+//                .spec(Specification.fakeAzureSpecBuilder())
+//                .when()
+//                .get("api/Authors")
+//                .then()
+//                .assertThat()
+//                .statusCode(200)
+//                .extract()
+//                .body()
+//                .jsonPath()
+//                .getList("", AzureAuthor.class);
+//    }
 }
