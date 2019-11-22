@@ -11,7 +11,7 @@ public class ErrorResponse {
         @JsonProperty("error.code")
         public int errorCode;
 
-        @JsonProperty("validation_erro")
+        @JsonProperty("validation_error")
         public String validationError;
 
         public String message;
