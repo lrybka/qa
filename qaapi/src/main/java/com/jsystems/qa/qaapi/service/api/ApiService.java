@@ -1,4 +1,4 @@
-package com.jsystems.qa.qaapi.service.user;
+package com.jsystems.qa.qaapi.service.api;
 
 import com.jsystems.qa.qaapi.model.azure.author.AzureAuthor;
 import com.jsystems.qa.qaapi.model.device.User;
