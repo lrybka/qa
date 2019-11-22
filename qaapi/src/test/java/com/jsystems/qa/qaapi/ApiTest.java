@@ -7,7 +7,7 @@ import com.jsystems.qa.qaapi.model.error.ErrorResponse;
 import com.jsystems.qa.qaapi.model.user.MyUser;
 import com.jsystems.qa.qaapi.model.user.UserAzure;
 import com.jsystems.qa.qaapi.model.user.UserDb;
-import com.jsystems.qa.qaapi.service.ApiService;
+import com.jsystems.qa.qaapi.service.user.ApiService;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
