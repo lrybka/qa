@@ -171,5 +171,7 @@ public class ApiTest {
         assertTrue(userdb_1.getName().equals(userDb.getName()));
         assertTrue(userdb_1.getSurname().equals(userDb.getSurname()));
 
+        UserDao.deleteUser((userdb_1.getId()));
+
     }
 }

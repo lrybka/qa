@@ -71,6 +71,32 @@ public class UserDao {
             e.printStackTrace();
         }
     }
+
+    public static void deleteUser(Long id) {
+        String sql = "delete testuser where id = " + id;
+        try {
+            Statement statement = DatabaseConnector.getConnection().createStatement();
+            statement.executeUpdate(sql);
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void updateUser(UserDb userDb, Long id) {
+        String sql = "update testuser set id = " + userDb.getId() + ", name = "
+                + userDb.getName() + ", surname = " + userDb.getSurname() +
+                " where id = " + id;
+        try {
+            Statement statement = DatabaseConnector.getConnection().createStatement();
+            statement.executeUpdate(sql);
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
 
 
