@@ -1,11 +1,10 @@
-package com.jsystem.qa.qaapi.model;
+package com.jsystems.qa.qaapi.model.device;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class User {
-
     @JsonProperty(required = true)
     public String imie;
 
@@ -14,6 +13,5 @@ public class User {
 
     @JsonProperty(required = true)
     public List<Device> device;
-
 
 }

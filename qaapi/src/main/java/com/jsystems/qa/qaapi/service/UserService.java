@@ -1,6 +1,6 @@
-package com.jsystem.qa.qaapi.service;
+package com.jsystems.qa.qaapi.service;
 
-import com.jsystem.qa.qaapi.model.User;
+import com.jsystems.qa.qaapi.model.device.User;
 import io.restassured.RestAssured;
 
 import java.util.List;
