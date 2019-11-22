@@ -1,4 +1,4 @@
-package com.jsystems.qa.qaapi.model.azure;
+package com.jsystems.qa.qaapi.model.azure.author;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

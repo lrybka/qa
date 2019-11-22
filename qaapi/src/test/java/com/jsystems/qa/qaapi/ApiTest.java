@@ -1,7 +1,7 @@
 package com.jsystems.qa.qaapi;
 
 import com.jsystems.qa.qaapi.database.UserDao;
-import com.jsystems.qa.qaapi.model.azure.AzureAuthor;
+import com.jsystems.qa.qaapi.model.azure.author.AzureAuthor;
 import com.jsystems.qa.qaapi.model.device.User;
 import com.jsystems.qa.qaapi.model.error.ErrorResponse;
 import com.jsystems.qa.qaapi.model.user.MyUser;
