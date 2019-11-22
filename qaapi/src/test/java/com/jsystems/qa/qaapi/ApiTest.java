@@ -156,5 +156,6 @@ public class ApiTest {
     public void getAllUserDb(){
         List<UserDb> userDbs = UserDao.getAllUsers();
         System.out.println(userDbs);
+
     }
 }
