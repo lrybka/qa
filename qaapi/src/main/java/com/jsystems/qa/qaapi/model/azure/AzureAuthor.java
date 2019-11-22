@@ -6,7 +6,7 @@ import java.util.List;
 
 public class AzureAuthor {
 
-    @JsonProperty(value = "device.model", required = true)
+    @JsonProperty(value = "Authors", required = true)
     public List<AzureAuthor> deviceModel;
 
 }
