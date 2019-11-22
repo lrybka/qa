@@ -149,8 +149,13 @@ public class ApiTest {
         Book book = new Book(1,"Jsystems", "Szkolenia", 382, "en", "2019-11-22T09:41:54.400Z");
         BookService.postBook(book, 200);
 
+    }
 
 
-
+    @Test
+    @DisplayName("Get all users")
+    public void getAllUserDb(){
+        List<UserDb> userDbs = UserDao.getAllUsers();
+        System.out.println();
     }
 }
