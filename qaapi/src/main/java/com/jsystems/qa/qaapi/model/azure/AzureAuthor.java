@@ -6,7 +6,10 @@ import java.util.List;
 
 public class AzureAuthor {
 
+    @JsonProperty(required = true)
+    public String type;
+
     @JsonProperty(value = "Authors", required = true)
-    public List<AzureAuthor> deviceModel;
+    public List<AzureAuthor> Authors;
 
 }

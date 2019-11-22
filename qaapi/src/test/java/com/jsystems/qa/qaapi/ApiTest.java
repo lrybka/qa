@@ -1,6 +1,7 @@
 package com.jsystems.qa.qaapi;
 
 import com.jsystems.qa.qaapi.database.UserDao;
+import com.jsystems.qa.qaapi.model.azure.AzureAuthor;
 import com.jsystems.qa.qaapi.model.device.User;
 import com.jsystems.qa.qaapi.model.error.ErrorResponse;
 import com.jsystems.qa.qaapi.model.user.MyUser;
@@ -116,4 +117,14 @@ public class ApiTest {
         System.out.println(UserDao.getOneById(3L).getId() +": "+  UserDao.getOneById(3L).getName() +"."+ UserDao.getOneById(3L).getSurname());
         System.out.println(UserDao.getOneById(4L).getId() +": "+  UserDao.getOneById(4L).getName() +"."+ UserDao.getOneById(4L).getSurname());
     }
+
+    @Test
+    @DisplayName("Get azure authors")
+    public void shouldReturnAllAzureAuthorsLst(){
+        List<AzureAuthor> azureAuthor = ApiService.getAzureAuthors();
+
+        assertThat(azureAuthor.size()).isGreaterThan(0);
+
+    }
+
 }
